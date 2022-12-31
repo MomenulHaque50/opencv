@@ -80,7 +80,7 @@ def analyse_video(pose_detector, lstm_classifier, video_path):
                     buffer_window.append(features)
                 else:
                     # convert input to tensor
-                    model_input = torch.Tensor(np.array(buffer_window, dtype=np.float32))
+                    model_input = torch.Tensor(np.array(buffer_window, dtype='int32'))
                     # add extra dimension
                     model_input = torch.unsqueeze(model_input, dim=0)
                     # predict the action class using lstm
