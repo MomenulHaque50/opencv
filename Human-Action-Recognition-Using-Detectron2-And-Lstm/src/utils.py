@@ -5,7 +5,7 @@ GREEN_COLOR = (0, 255, 0)
 
 
 def draw_line(image, p1, p2, color):
-    cv2.line(image, p1, p2, color, thickness=2, lineType=cv2.LINE_AA)
+    cv2.line(image, (int(p1[0]), int(p1[1])), (int(p2[0]), int(p2[1])), color, thickness=2, lineType=cv2.LINE_AA)
 
 
 def find_person_indicies(scores):
